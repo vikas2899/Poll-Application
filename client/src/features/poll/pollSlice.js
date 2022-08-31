@@ -8,10 +8,7 @@ const initialState = {
 };
 
 export const pollCreate = createAsyncThunk("poll/create", async (pollData) => {
-  const response = await axios.post(
-    "http://localhost:5000/api/poll/create",
-    pollData
-  );
+  const response = await axios.post("/api/poll/create", pollData);
   return response.data;
 });
 

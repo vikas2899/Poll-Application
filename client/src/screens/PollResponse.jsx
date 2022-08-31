@@ -71,7 +71,7 @@ const PollResponse = () => {
                 }
             }
             try {
-                const response = await axios.post("http://localhost:5000/api/poll/view", searchParams);
+                const response = await axios.post("/api/poll/view", searchParams);
                 setLoading(false);
                 setPollData(response.data);
             } catch (e) {
@@ -87,7 +87,7 @@ const PollResponse = () => {
             alert("You cannot close this poll");
         } else {
             try {
-                const response = await axios.put(`http://localhost:5000/api/poll/${pollId}/inactive`,
+                const response = await axios.put(`/api/poll/${pollId}/inactive`,
                     {
                         createdBy: createdBy,
                         currentUser: currentUser

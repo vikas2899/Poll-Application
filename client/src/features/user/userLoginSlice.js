@@ -8,10 +8,7 @@ const initialState = {
 };
 
 export const userLogin = createAsyncThunk("user/login", async (userData) => {
-  const response = await axios.post(
-    "http://localhost:5000/api/auth/login",
-    userData
-  );
+  const response = await axios.post("/api/auth/login", userData);
   return response.data;
 });
 

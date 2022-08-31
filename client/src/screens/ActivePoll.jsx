@@ -73,7 +73,7 @@ const ActivePoll = () => {
                 }
             }
             try {
-                const response = await axios.post("http://localhost:5000/api/poll/view", searchParams);
+                const response = await axios.post("/api/poll/view", searchParams);
                 setLoading(false);
                 setPollData(response.data);
             } catch (e) {

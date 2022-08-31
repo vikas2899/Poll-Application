@@ -55,7 +55,7 @@ const ActiveCard = (props) => {
     const handleSubmission = async () => {
         console.log(askResponse, props.pollId, currentUserId);
         try {
-            const response = await axios.put(`http://localhost:5000/api/poll/${props.pollId}`,
+            const response = await axios.put(`/api/poll/${props.pollId}`,
                 {
                     userId: currentUserId,
                     response: askResponse.toLowerCase()
