@@ -22,7 +22,7 @@ app.use("/api/auth", authRoute);
 app.use("/api/user", userRoute);
 app.use("/api/poll", pollRoute);
 
-// Serve Static assets
+// Deployment ----  Serve Static assets
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
   app.get("*", (req, res) => {
