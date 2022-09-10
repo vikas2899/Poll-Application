@@ -23,7 +23,6 @@ router.post("/create", async (req, res) => {
     const savedPoll = await newPoll.save();
     res.status(201).json(savedPoll);
   } catch (err) {
-    console.log("Creation Error " + err);
     res.status(500).json(err);
   }
 });
@@ -91,7 +90,6 @@ router.put("/:id", verifyUserID, async (req, res) => {
       },
     };
   }
-  console.log(req.params.id);
   try {
     const updatedPoll = await Poll.findByIdAndUpdate(
       req.params.id,
@@ -103,7 +101,6 @@ router.put("/:id", verifyUserID, async (req, res) => {
     );
     res.status(200).json(updatedPoll);
   } catch (err) {
-    console.log("Response Submimission : " + err);
     res.status(500).json(err);
   }
 });
@@ -122,7 +119,6 @@ router.put("/:id/inactive", verifyUpdatePoll, async (req, res) => {
     );
     res.status(200).json(updatedPoll);
   } catch (err) {
-    console.log("Update Error : " + err);
     res.status(500).json(err);
   }
 });

@@ -1,9 +1,9 @@
-import React from 'react'
+import React from "react";
 
 // Custom imports
-import Slider from '../components/Slider';
-import ServiceCard from '../components/ServiceCard';
-import Newsletter from '../components/Newsletter';
+import Slider from "../components/Slider";
+import ServiceCard from "../components/ServiceCard";
+import Newsletter from "../components/Newsletter";
 
 const Home = () => {
   return (
@@ -12,7 +12,7 @@ const Home = () => {
       <ServiceCard />
       <Newsletter />
     </div>
-  )
-}
+  );
+};
 
 export default Home;

@@ -11,7 +11,6 @@ const verifyUpdatePoll = async (req, res, next) => {
       next();
     }
   } catch (e) {
-    console.log("verifyUpdatePoll: " + e);
     res.status(500).json(e);
     next();
   }
